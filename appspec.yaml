@@ -3,8 +3,9 @@ Resources:
   - TargetService:
       Type: AWS::ECS::Service
       Properties:
-        TaskDefinition: "taskdef.json"
+        TaskDefinition: taskdef.json
         LoadBalancerInfo:
           ContainerName: "dogs"
           ContainerPort: 80
+
 
