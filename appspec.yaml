@@ -3,7 +3,8 @@ Resources:
   - TargetService:
       Type: AWS::ECS::Service
       Properties:
-        TaskDefinition: "arn:aws:ecs:ap-northeast-2:590184079146:task-definition/dogdef:10"
+        TaskDefinition: "taskdef.json"
         LoadBalancerInfo:
           ContainerName: "dogs"
           ContainerPort: 80
+
