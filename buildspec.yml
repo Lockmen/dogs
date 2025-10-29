@@ -26,10 +26,8 @@ phases:
       - docker push $REPOSITORY_URI:$IMAGE_TAG
       - echo Writing image definitions file...
       - printf '[{"name":"dogs","imageUri":"%s"}]' $REPOSITORY_URI:$IMAGE_TAG > imagedefinitions.json
-      - echo Replacing image name in taskdef.json...
-      - sed -i "s|<IMAGE1_NAME>|$AWS_ACCOUNT_ID.dkr.ecr.$AWS_REGION.amazonaws.com/$IMAGE_REPO_NAME:$COMMIT_HASH|" taskdef.json
+
 artifacts:
   files:
-    - appspec.yaml
     - imagedefinitions.json
-    - appspec.yml
+
