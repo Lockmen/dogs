@@ -1,7 +1,7 @@
 {
   "family": "your-task-family",
   "networkMode": "awsvpc",
-  "requiresCompatibilities": ["EC2"],
+  "requiresCompatibilities": ["FARGATE"],
   "cpu": "256",
   "memory": "512",
   "executionRoleArn": "arn:aws:iam::account:role/ecsTaskExecutionRole",
